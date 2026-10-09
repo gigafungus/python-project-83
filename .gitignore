@@ -52,3 +52,7 @@ MANIFEST
 __pycache__/
 *.py[codz]
 *$py.class
+
+#Other
+node_modules/
+page_analyzer/static/css/main.css
