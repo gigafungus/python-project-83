@@ -1,10 +1,17 @@
+setup: install build-css
+
 install:
 	uv sync
+	npm ci
+
+build-css:
+	npm run build:css
 
 dev:
 	uv run flask --debug --app page_analyzer:app run
 
-setup: install
+watch:
+	npx tailwindcss --input assets/css/source.css --output page_analyzer/static/css/main.css --watch
 
 lint:
 	uv run ruff check
